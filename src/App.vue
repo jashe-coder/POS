@@ -31,6 +31,10 @@ export default {
         { id: 10, name: 'Decadent Shakes', price: 4, image: 'https://i.pinimg.com/736x/52/48/ce/5248cea69ba1a478f1b7484bcbb06784.jpg' },
         { id: 11, name: 'Fresh Cucumber Juice', price: 3, image: 'https://i.pinimg.com/1200x/03/9a/21/039a214c8298c96e26c0cf10621c3939.jpg' },
         { id: 12, name: 'Thé glacé', price: 3, image: 'https://i.pinimg.com/736x/a6/f4/f7/a6f4f7c3f6042346b198e9f2001bcdb3.jpg' },
+        { id: 13, name: 'French Onion Soup', price: 5, image: 'https://i.pinimg.com/1200x/4d/8a/f8/4d8af8ecd8a0c99166fdfbe2aceca79c.jpg' },
+        { id: 14, name: 'Burrata', price: 8, image: 'https://i.pinimg.com/1200x/b0/0d/74/b00d7474fa6915c8f7357e184e5e1857.jpg' },
+        { id: 15, name: 'Le Scallops', price: 7, image: 'https://i.pinimg.com/1200x/3a/df/72/3adf720718f970e8b7e9625a284d8675.jpg' },
+
       ],
       page: 'Dashboard',
       orders: [],

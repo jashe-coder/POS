@@ -92,7 +92,7 @@ export default {
   <div class="w-full">
     <h1 class="text-3xl font-bold mb-5">POS System</h1>
     <button @click="showAdd = !showAdd" class="bg-[#302218] text-white p-3 rounded mb-5">+ Add Product</button>
-    <div v-if="showAdd" class="bg-white p-5 rounded-xl shadow mb-5">
+    <div v-if="showAdd" class="bg-white p-5 rounded-xl shadow mb-5 grid grid-cols-1 gap-1">
       <h2 class="text-xl font-bold mb-4">Add New Product</h2>
       <input v-model="productName" placeholder="Product Name" class="border p-3 w-150 mb-3 rounded">
       <input v-model="productPrice" type="number" placeholder="Price" class="border p-3 w-150 mb-3 rounded">
@@ -105,12 +105,12 @@ export default {
     </div>
     <div class="flex gap-5 justify-center">
       <!-- FOOD MENU -->
-      <div class="w-3/4 max-h-116 overflow-y-scroll">
+      <div class="p-5 max-h-116 overflow-y-scroll">
         <h2 class="text-xl font-bold mb-4">Food Menu</h2>
-        <div class="grid grid-cols-3 gap-4 w-180">
+        <div class="grid grid-cols-3 gap-4">
           <div v-for="food in foodArray" :key="food.id"
-            class="bg-white p-4 rounded-xl shadow text-center border border-black">
-            <img :src="food.image" alt="" class="w-full h-40 mb-5 rounded-md object-cover cursor-pointer">
+            class="bg-white p-4 rounded-xl shadow text-center border-2 border-yellow-950">
+            <img :src="food.image" alt=""class="w-full h-40 mb-5 rounded-md object-cover cursor-pointer">
             <h3 class="font-bold">{{ food.name }}</h3>
             <p class="my-2">${{ food.price }}</p>
             <button @click="addToCart(food)" class="bg-[#302218] text-white px-4 py-2 rounded-md cursor-pointer">
@@ -120,7 +120,7 @@ export default {
         </div>
       </div>
       <!-- CURRENT ORDER -->
-      <div class="bg-white p-5 rounded-xl shadow border border-black">
+      <div class="bg-white p-5 rounded-xl shadow border-2 border-yellow-950">
         <h2 class="text-xl font-bold mb-4">Current Order</h2>
         <p v-if="carts.length === 0">No items selected.</p>
         <div v-for="(item, index) in carts" :key="index" class="border-b py-3">
